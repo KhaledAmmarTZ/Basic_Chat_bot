@@ -1,0 +1,20 @@
+{
+    "intents": [
+      {
+        "tag": "admission",
+        "patterns": ["How do I apply?", "Admission process?", "When is the deadline?"],
+        "responses": ["You can apply online through our admission portal at www.university.edu/apply."]
+      },
+      {
+        "tag": "fees",
+        "patterns": ["What is the fee structure?", "Tuition fees?", "How much does the course cost?"],
+        "responses": ["The fee structure varies by course. Please visit www.university.edu/fees for details."]
+      },
+      {
+        "tag": "exam",
+        "patterns": ["When are the exams?", "Exam schedule?", "Final exam date?","Final exam date?", "exam", "exams"],
+        "responses": ["The exam schedule is available on the student portal under 'Exam Timetable'."]
+      }
+    ]
+  }
+  

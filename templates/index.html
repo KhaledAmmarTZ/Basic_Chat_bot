@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Support Chatbot</title>
+</head>
+<body>
+    <h1>Student Support Chatbot</h1>
+    <div id="chatbox"></div>
+    <input type="text" id="user_input" placeholder="Ask me something...">
+    <button onclick="send()">Send</button>
+
+    <script>
+        function send() {
+            var userInput = document.getElementById("user_input").value;
+            fetch("/get", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: "msg=" + encodeURIComponent(userInput)
+            })
+            .then(response => response.text())
+            .then(data => {
+                var chatbox = document.getElementById("chatbox");
+                chatbox.innerHTML += "<p><strong>You:</strong> " + userInput + "</p>";
+                chatbox.innerHTML += "<p><strong>Bot:</strong> " + data + "</p>";
+                document.getElementById("user_input").value = "";
+            });
+        }
+    </script>
+</body>
+</html>
