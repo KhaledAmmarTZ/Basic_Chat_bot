@@ -14,6 +14,11 @@
         "tag": "exam",
         "patterns": ["When are the exams?", "Exam schedule?", "Final exam date?","Final exam date?", "exam", "exams"],
         "responses": ["The exam schedule is available on the student portal under 'Exam Timetable'."]
+      },
+      {
+        "tag": "class",
+        "patterns": ["When is the class?", "Class schedule?", "Class time?"],
+        "responses": ["The class schedule is available on the student portal under 'Class Timetable'."]
       }
     ]
   }
