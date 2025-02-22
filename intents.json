@@ -1,25 +1,79 @@
 {
-    "intents": [
-      {
-        "tag": "admission",
-        "patterns": ["How do I apply?", "Admission process?", "When is the deadline?"],
-        "responses": ["You can apply online through our admission portal at www.university.edu/apply."]
-      },
-      {
-        "tag": "fees",
-        "patterns": ["What is the fee structure?", "Tuition fees?", "How much does the course cost?"],
-        "responses": ["The fee structure varies by course. Please visit www.university.edu/fees for details."]
-      },
-      {
-        "tag": "exam",
-        "patterns": ["When are the exams?", "Exam schedule?", "Final exam date?","Final exam date?", "exam", "exams"],
-        "responses": ["The exam schedule is available on the student portal under 'Exam Timetable'."]
-      },
-      {
-        "tag": "class",
-        "patterns": ["When is the class?", "Class schedule?", "Class time?"],
-        "responses": ["The class schedule is available on the student portal under 'Class Timetable'."]
-      }
-    ]
-  }
-  
+  "intents": [
+    {
+      "tag": "admission",
+      "patterns": ["How do I apply?", "Admission process?", "When is the deadline?", "How to get admitted?", "Admission requirements?"],
+      "responses": ["You can apply online through our admission portal at www.university.edu/apply. The deadline varies by program."]
+    },
+    {
+      "tag": "fees",
+      "patterns": ["What is the fee structure?", "Tuition fees?", "How much does the course cost?", "Are there any scholarships?", "Is there financial aid available?"],
+      "responses": ["The fee structure varies by course. Please visit www.university.edu/fees for details. We also offer scholarships and financial aid options."]
+    },
+    {
+      "tag": "exam",
+      "patterns": ["When are the exams?", "Exam schedule?", "Final exam date?", "Exam dates?", "Midterm exam?", "Upcoming exams?", "Exams"],
+      "responses": ["The exam schedule is available on the student portal under 'Exam Timetable'."]
+    },
+    {
+      "tag": "class",
+      "patterns": ["When is the class?", "Class schedule?", "Class time?", "What time is my class?", "Timetable for classes?"],
+      "responses": ["The class schedule is available on the student portal under 'Class Timetable'."]
+    },
+    {
+      "tag": "hostel",
+      "patterns": ["Do you have hostel facilities?", "How to apply for hostel?", "Hostel fees?", "Is there accommodation available?", "Student housing?"],
+      "responses": ["Yes, we offer hostel facilities. You can check availability and apply at www.university.edu/hostel."]
+    },
+    {
+      "tag": "library",
+      "patterns": ["Where is the library?", "Library hours?", "How to borrow books?", "Library services?", "Is there an online library?"],
+      "responses": ["The library is open from 8 AM to 8 PM on weekdays. You can borrow books using your student ID. Visit www.university.edu/library for online resources."]
+    },
+    {
+      "tag": "transport",
+      "patterns": ["Do you provide transportation?", "Bus schedule?", "How to get a bus pass?", "Campus shuttle?", "University transport service?"],
+      "responses": ["Yes, we provide transportation services. Bus schedules and pass details are available at www.university.edu/transport."]
+    },
+    {
+      "tag": "events",
+      "patterns": ["Upcoming events?", "University events?", "Campus activities?", "Are there any fests?", "How to participate in events?"],
+      "responses": ["You can check the latest events and activities on our events page: www.university.edu/events."]
+    },
+    {
+      "tag": "faculty",
+      "patterns": ["Who are the professors?", "Faculty list?", "How can I contact my professor?", "Department faculty?", "Staff details?"],
+      "responses": ["You can find faculty details and contact information at www.university.edu/faculty."]
+    },
+    {
+      "tag": "contact",
+      "patterns": ["How to contact the university?", "University phone number?", "Email for inquiries?", "Support contact?", "Where is the university located?", "contact"],
+      "responses": ["You can reach us at contact@university.edu or call us at +123-456-7890. Our address is available at www.university.edu/contact."]
+    },
+    {
+      "tag": "courses",
+      "patterns": ["What courses do you offer?", "Available programs?", "Undergraduate courses?", "Postgraduate programs?", "Which departments do you have?"],
+      "responses": ["We offer a wide range of undergraduate and postgraduate programs. Visit www.university.edu/courses for the full list."]
+    },
+    {
+      "tag": "results",
+      "patterns": ["Where can I check my results?", "Exam results?", "Semester results?", "Final grades?", "How to access my grades?"],
+      "responses": ["You can check your results on the student portal under 'Exam Results' or visit www.university.edu/results."]
+    },
+    {
+      "tag": "internship",
+      "patterns": ["Are there internship opportunities?", "How to apply for internships?", "Internship programs?", "Does the university offer internships?", "Internship placements?"],
+      "responses": ["Yes, we have internship programs in collaboration with industry partners. Check opportunities at www.university.edu/internships."]
+    },
+    {
+      "tag": "placement",
+      "patterns": ["Does the university have placement support?", "How to get campus placement?", "Placement cell contact?", "Career services?", "Job opportunities?"],
+      "responses": ["Our university provides placement support through our career services department. Visit www.university.edu/placements for details."]
+    },
+    {
+      "tag": "sports",
+      "patterns": ["Are there sports facilities?", "How to join a sports team?", "University sports teams?", "Sports events?", "Gym facilities?"],
+      "responses": ["Yes, we have various sports facilities and teams. Visit www.university.edu/sports to learn more."]
+    }
+  ]
+}
