@@ -74,6 +74,11 @@
       "tag": "sports",
       "patterns": ["Are there sports facilities?", "How to join a sports team?", "University sports teams?", "Sports events?", "Gym facilities?"],
       "responses": ["Yes, we have various sports facilities and teams. Visit www.university.edu/sports to learn more."]
+    },
+    {
+      "tag": "hello",
+      "patterns": ["Hi", "Hello", "Hey", "Greetings", "Good morning", "Good afternoon", "Good evening"],
+      "responses": ["Hello! How can I help you today?", "Hi! What can I assist you with?", "Hey! How can I assist you today?"]
     }
   ]
 }
