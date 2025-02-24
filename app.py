@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import json
 import random
+import re
 
 app = Flask(__name__)
 
@@ -10,9 +11,10 @@ with open('intents.json') as file:
 
 # Function to get a response
 def get_response(user_input):
+    user_input = user_input.lower()  # Convert user input to lowercase
     for intent in intents['intents']:
         for pattern in intent['patterns']:
-            if pattern.lower() in user_input.lower():
+            if re.search(pattern.lower(), user_input):  # Use regex search for pattern matching
                 return random.choice(intent['responses'])
     return "Sorry, I didn't understand that."
 
