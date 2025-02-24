@@ -16,9 +16,24 @@ def get_response(user_input):
                 return random.choice(intent['responses'])
     return "Sorry, I didn't understand that."
 
+# Load index.html but start with profile.html content
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', page='profile.html')
+
+@app.route('/profile')
+def profile():
+    return render_template('profile.html', layout=False)  # Prevents full reloading
+
+@app.route('/class_routine')
+def class_routine():
+    return render_template('class_routine.html', layout=False)
+
+@app.route('/class_test')
+def class_test():
+    return render_template('class_test.html', layout=False)
+
+
 
 @app.route('/get', methods=['POST'])
 def get_bot_response():

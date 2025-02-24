@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sansation&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:wght@900&display=swap" rel="stylesheet">
+
     <title>Student Support Chatbot</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 20px;
-        }
         h1 {
             color: #333;
             text-align: center;
@@ -50,14 +52,88 @@
     </style>
 </head>
 
-<body>
-    <h1>Student Support Chatbot</h1>
-    <div id="chatbox"></div>
-    <div style="display: flex; gap: 10px;">
-        <input type="text" id="user_input" placeholder="Ask me something...">
-        <button onclick="send()">Send</button>
-    </div>
+<body style="background-color: #F0FFFC;">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light" style="height: 100px; margin: 10px 17px; border-radius: 5px; background-color: #005F56; font-family: 'Sansation', sans-serif; font-weight: 700;">
+        <a class="navbar-brand d-flex align-items-center text-white" style="margin-left: 20px; font-weight: bold;" href="#">
+            <img src="#" alt="Logo" style="height: 50px; width: auto; margin-right: 10px;">
+            <span class="font-weight-bold">Premier University</span>
+        </a>
 
+
+        <!-- Time & Date Section (Stacked Layout) -->
+        <div class="ml-auto text-white text-center" id="datetime" style="font-size: 20px; font-weight: bold; display: flex; flex-direction: column; align-items: center; margin-right: 20px;"></div>
+    </nav>
+        <div class="container-fluid">
+            <div class="row flex-xl-nowrap" style="min-height: 100vh;">
+                <!-- Sidebar with Border-Right for Vertical Line -->
+                <div class="col-12 col-md-3 col-xl-2 p-3 border-right" style="border-right: 2px solid #ccc;">
+                    <div class="card shadow h-100;" style="background-color: #DFF6F0;">
+                        <!-- Sidebar Header <div class="card-header bg-primary text-white text-center">
+                            Sidebar Menu
+                        </div> -->
+                        <div class="card-body"> 
+                            <!-- Profile Section -->
+                            <form class="bd-search d-flex align-items-center mb-3">
+                                <img src="#" class="rounded-circle border" width="40" height="40">
+                                <span class="ml-2 font-weight-bold">User name</span>
+                            </form>
+                            <hr class="my-3">
+                            
+                            <!-- Navigation Buttons -->
+                            <nav class="bd-links">
+                            <div class="d-grid gap-2">
+                                <a href="#" onclick="loadPage('/profile')" class="btn btn-success btn-block">Profile</a>
+                                <!-- Train Section -->
+                                <button class="btn btn-success btn-block mb-2" type="button" data-toggle="collapse" data-target="#classOptions">
+                                    Class
+                                </button>
+                                <div class="collapse mb-3" id="classOptions">
+                                    <a href="#" class="btn btn-primary" onclick="loadPage('/class_routine')">Class Routine</a>
+                                    <a href="#" class="btn btn-secondary" onclick="loadPage('/class_test')">Class Test</a>
+                                </div>                                
+                            </div>
+                            
+                        </nav>
+
+                        </div>                     
+                        <div class="card-footer border-0 text-center" style="background-color: #DFF6F0;">
+                            <form action="#" method="POST">
+                                <button type="submit" class="btn btn-danger btn-block">Logout</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Section -->
+                <div class="col-md-7 p-3">
+                    <div id="main-content" class="d-flex justify-content-center align-items-start shadow p-3 mb-5 rounded" 
+                         style="height: auto; padding-top: 50px; background-color: #DFF6F0; border: 1px solid #ccc;">
+                        {% include page %}
+                    </div>
+                </div>
+            
+                <!-- Chatbot Section -->
+                <div class="col-md-3 p-3 border-left" style="border-left: 2px solid #ccc;">
+                    <div class="card shadow" style="background-color: #DFF6F0;">
+                        <div class="card-body">
+                            <h5 class="text-center">Student Support Chatbot</h5>
+                            <hr>
+                            <div id="chatbox"></div>
+                            <input type="text" id="user_input" placeholder="Ask me something...">
+                            <button onclick="send()">Send</button>
+                        </div>
+                    </div>
+                </div>                                 
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function send() {
             var userInput = document.getElementById("user_input").value;
@@ -83,6 +159,50 @@
 
             document.getElementById("user_input").value = "";
         }
+        $(document).ready(function () {
+            // Handle navigation clicks dynamically
+            $(".nav-link").click(function (event) {
+                event.preventDefault();
+                var page = $(this).attr("href");
+
+                // Load new page content inside #content (Chatbot remains unchanged)
+                $("#content").load(page);
+            });
+
+            // Chatbot functionality
+            $("#send-btn").click(function () {
+                var userMessage = $("#user-input").val();
+                $("#chat-log").append("<p><strong>You:</strong> " + userMessage + "</p>");
+                $("#user-input").val("");
+
+                // Send the message to Flask backend
+                $.post("/chat", { message: userMessage }, function (data) {
+                    $("#chat-log").append("<p><strong>Bot:</strong> " + data.response + "</p>");
+                });
+            });
+        });
+        function updateDateTime() {
+            let now = new Date();
+            let date = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            let time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+            document.getElementById('datetime').innerHTML = `<span style="font-size: 22px;">${time}</span> <span style="font-size: 16px; margin-top: 5px;">${date}</span>`;
+        }
+        setInterval(updateDateTime, 1000); // Update every second
+        updateDateTime(); // Initial call
+
+        function loadPage(page) {
+            $.ajax({
+                url: page, // Request the Flask route
+                success: function(data) {
+                    $("#main-content").html(data);
+                },
+                error: function() {
+                    $("#main-content").html("<h2>Page not found</h2>");
+                }
+            });
+        }
+
     </script>
 </body>
 </html>

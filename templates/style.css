@@ -1,0 +1,199 @@
+/* Custom styles for transparent buttons with borders */
+.custom-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0FFFC;
+    border: 2px solid #2A9D8F;
+    color: #000000;
+    height: 50px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.custom-btn:hover {
+    background-color:  #2A9D8F;
+    color: #ffffff;
+    text-decoration: none !important;
+}
+
+.custom-btn:active {
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none !important;
+}
+
+/* Login Button */
+.login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #28a745; 
+    border: 2px solid #025213;
+    color: white;
+    height: 50px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+    background-color: #025213;
+    color: white;
+    text-decoration: none !important;
+}
+
+/* Register Button */
+.register-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007BFF; 
+    border: 2px solid #3fd9ff;
+    color: white;
+    height: 50px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+    background-color: #3fd9ff;
+    text-decoration: none !important;
+}
+
+/* delete Button */
+.delete-btn {
+    background-color: #fa0303; 
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+    background-color: #d60000;
+    color: white;
+}
+
+/* update Button */
+.update-btn {
+    background-color: #28a745; 
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.update-btn:hover {
+    background-color: #025213;
+    color: white;
+}
+
+/* Sidebar Button */
+.sidebar-btn {
+    background-color: #F0FFFC; 
+    color: #1a1a1a; 
+    border: 4px solid #a7edff; 
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    display: block; /* Makes buttons stack vertically */
+    width: 93%; 
+    text-align: center; /* Centers text inside */
+    margin-bottom: 10px; /* Adds spacing between buttons */
+}
+
+.sidebar-btn:hover {
+    background-color: #58F4F4;
+    color: rgb(0, 0, 0);
+}
+
+.btn-success {
+    background-color: #005F56;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #ccc;
+}
+
+.btn-success:hover {
+    background-color: #F0FFFC;
+    color: rgb(0, 0, 0);
+}
+/* Transparent search bar */
+.search-bar {
+    background-color: transparent;
+    border: 2px solid #0b87a5; /* Border color */
+    color: #414141; /* Text color */
+    width: 300px; 
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Placeholder color */
+.search-bar::placeholder {
+    color: #1f1f1f; 
+}
+
+/* White background when focused */
+.search-bar:focus {
+    background-color: white;
+    color: black; /* Text color */
+    outline: none; /* Remove default focus outline */
+    border-color: #007BFF; /* Darker border on focus */
+}
+
+
+.search-btn {
+    background-color: #0a161a; /* Dark blue */
+    color: rgb(255, 255, 255); /* Text color */
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+/* Space between buttons */
+.custom-btn, .login-btn, .register-btn {
+    padding: 8px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.mx-2 { 
+    margin-left: 20px; /* Horizontal spacing */
+    margin-right: 10px;
+}
+
+.mr-4 { 
+    margin-right: 20px; /* Extra space after search bar */
+}
+
+/* Remove underline from links */
+a {
+    text-decoration: none;
+}
+
+/* Ensure navbar content stays centered */
+.mx-auto {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Align login and register buttons to the right */
+.ml-auto {
+    display: flex;
+}
+
+/* Custom rounded corners */
+.custom-rounded {
+    border-radius: 10px;
+}
+
+.content {
+    flex: 1;
+  }
