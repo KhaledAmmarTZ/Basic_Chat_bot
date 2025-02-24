@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, request, jsonify, render_template
 import json
 import random
 
@@ -16,16 +16,14 @@ def get_response(user_input):
                 return random.choice(intent['responses'])
     return "Sorry, I didn't understand that."
 
-# Home page route
-@app.route("/")
-def home():
-    return render_template("index.html")
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-# Chatbot response route
-@app.route("/get", methods=["POST"])
-def chatbot_response():
-    user_input = request.form["msg"]
+@app.route('/get', methods=['POST'])
+def get_bot_response():
+    user_input = request.form['msg']
     return get_response(user_input)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)

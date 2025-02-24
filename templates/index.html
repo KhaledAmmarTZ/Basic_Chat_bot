@@ -3,30 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Student Support Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        #chatbox {
+            height: 400px;
+            border: 1px solid #ddd;
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            overflow-y: auto;
+            border-radius: 5px;
+        }
+        #user_input {
+            width: calc(100% - 100px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            width: 80px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin: 5px 0;
+        }
+        strong {
+            color: #007bff;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Student Support Chatbot</h1>
     <div id="chatbox"></div>
-    <input type="text" id="user_input" placeholder="Ask me something...">
-    <button onclick="send()">Send</button>
+    <div style="display: flex; gap: 10px;">
+        <input type="text" id="user_input" placeholder="Ask me something...">
+        <button onclick="send()">Send</button>
+    </div>
 
     <script>
         function send() {
             var userInput = document.getElementById("user_input").value;
-            fetch("/get", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: "msg=" + encodeURIComponent(userInput)
+            var chatbox = document.getElementById("chatbox");
+            chatbox.innerHTML += "<p><strong>You:</strong> " + userInput + "</p>";
+
+            fetch('/get', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'msg=' + encodeURIComponent(userInput)
             })
             .then(response => response.text())
-            .then(data => {
-                var chatbox = document.getElementById("chatbox");
-                chatbox.innerHTML += "<p><strong>You:</strong> " + userInput + "</p>";
-                chatbox.innerHTML += "<p><strong>Bot:</strong> " + data + "</p>";
-                document.getElementById("user_input").value = "";
+            .then(response => {
+                chatbox.innerHTML += "<p><strong>Bot:</strong> " + response + "</p>";
+                chatbox.scrollTop = chatbox.scrollHeight;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                chatbox.innerHTML += "<p><strong>Bot:</strong> Sorry, I'm having trouble understanding right now. Please try again later.</p>";
             });
+
+            document.getElementById("user_input").value = "";
         }
     </script>
-    
 </body>
 </html>

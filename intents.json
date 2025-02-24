@@ -79,6 +79,31 @@
       "tag": "hello",
       "patterns": ["Hi", "Hello", "Hey", "Greetings", "Good morning", "Good afternoon", "Good evening"],
       "responses": ["Hello! How can I help you today?", "Hi! What can I assist you with?", "Hey! How can I assist you today?"]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": ["What scholarships are available?", "How to apply for scholarships?", "Scholarship eligibility?", "Are there any merit-based scholarships?", "Financial aid options?"],
+      "responses": ["We offer various scholarships based on merit and need. Visit www.university.edu/scholarships for more information."]
+    },
+    {
+      "tag": "visa",
+      "patterns": ["How to apply for a student visa?", "Visa requirements?", "Do I need a visa to study?", "Visa application process?", "International student visa?"],
+      "responses": ["International students must apply for a student visa. Please check the visa requirements on our website or contact the international office."]
+    },
+    {
+      "tag": "health",
+      "patterns": ["What health services are available?", "How to access health services?", "Is there a clinic on campus?", "Health insurance for students?", "Mental health services?"],
+      "responses": ["We provide health services through our campus clinic. Visit www.university.edu/health for more details."]
+    },
+    {
+      "tag": "counseling",
+      "patterns": ["Do you offer counseling services?", "How to get counseling?", "Mental health support?", "Counseling for students?", "Where to find a counselor?"],
+      "responses": ["Yes, we offer counseling services for students. You can schedule an appointment at www.university.edu/counseling."]
+    },
+    {
+      "tag": "feedback",
+      "patterns": ["How to provide feedback?", "Where can I give suggestions?", "Feedback form?", "Student feedback?", "How to report an issue?"],
+      "responses": ["We value your feedback! Please visit www.university.edu/feedback to share your thoughts."]
     }
   ]
 }
