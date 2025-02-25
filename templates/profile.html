@@ -1,2 +1,107 @@
-<h1>Welcome to the University Portal</h1>
-<p>Here you can find information about admissions, courses, and more.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Sansation&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:wght@900&display=swap" rel="stylesheet">
+<style>
+                .progress-container {
+                    border-radius: 10px;
+                    overflow: hidden;
+                    background-color: #f3f3f3;
+                    margin: 5px 0;
+                }
+            
+                .progress-bar {
+                    width: 100%;
+                    height: 20px; /* Adjust height as needed */
+                    border-radius: 10px;
+                    appearance: none; /* Remove default styles */
+                }
+            
+                .progress-bar::-webkit-progress-bar {
+                    background-color: #f3f3f3; /* Background color of the progress bar */
+                }
+            
+                .progress-bar::-webkit-progress-value {
+                    background-color: #4caf50; /* Progress color */
+                    border-radius: 10px; /* Rounded corners for the progress value */
+                }
+            
+                .progress-bar::-moz-progress-bar {
+                    background-color: #4caf50; /* Progress color for Firefox */
+                    border-radius: 10px; /* Rounded corners for Firefox */
+                }
+            </style>
+</head>
+<body>
+
+    <div class="w-100 p-4"> 
+        <!-- Top Section: Profile Pic & User Info -->
+        
+            <div align="center">
+                <img src="{{ url_for('static', filename='images/Khaled.jpg') }}" alt="Student Image" 
+                class="border custom-rounded img-fluid" width="220" height="220" style="border-radius: 5%; margin-bottom: 20px;">
+                <h2>Student Name</h2>
+                <p>Student ID: 123456</p>
+                <hr style="width: 80%; height: 2px; background-color: black; border: none;">
+            </div>
+        
+
+        <hr>
+
+        <!-- Additional Details Section -->
+        <div class="row" style="display: flex; justify-content: space-between; gap: 20px; margin-top: 20px;">
+            <!-- Left Section: Study Progress -->
+            <div style="width: 30%; text-align: center; border: 1px solid #ccc; padding: 15px; border-radius: 10px;">
+                <h3>Study Progress</h3>
+                <hr style="width: 80%; height: 2px; background-color: black; border-radius: 90%;">
+                <p>Mathematics</p>
+                <div class="progress-container">
+                    <progress value="70" max="100" class="progress-bar"></progress>
+                </div>
+                <p>Science</p>
+                <div class="progress-container">
+                    <progress value="85" max="100" class="progress-bar"></progress>
+                </div>
+                <p>English</p>
+                <div class="progress-container">
+                    <progress value="60" max="100" class="progress-bar"></progress>
+                </div>
+            </div>
+        
+            <!-- Middle Section: Upcoming Tests -->
+            <div style="width: 30%; text-align: center; border: 1px solid #ccc; padding: 15px; border-radius: 10px;">
+                <h3>Upcoming Tests</h3>
+                <hr style="width: 80%; height: 2px; background-color: black; border-radius: 90%;">
+                <ul style="list-style: none; padding: 0; text-align: left;">
+                    <li>Math Test - March 5</li>
+                    <li>Science Quiz - March 8</li>
+                    <li>English Exam - March 12</li>
+                </ul>
+            </div>
+
+            <!-- Right Section: Notices -->
+            <div style="width: 30%; text-align: center; border: 1px solid #ccc; padding: 15px; border-radius: 10px;">
+                <h3>Notices</h3>
+                <hr style="width: 80%; height: 2px; background-color: black; border-radius: 90%;">
+                <ul style="list-style: none; padding: 0; text-align: left;">
+                    <li>School closed on March 15</li>
+                    <li>New syllabus update available</li>
+                    <li>Parent-Teacher meeting on March 20</li>
+                </ul>
+            </div>
+        </div>        
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
