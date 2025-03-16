@@ -3,77 +3,92 @@
     {
       "tag": "admission",
       "patterns": ["How do I apply?","Admission", "Admission process?", "When is the deadline?", "How to get admitted?", "Admission requirements?"],
-      "responses": ["You can apply online through our admission portal at www.university.edu/apply. The deadline varies by program."]
+      "responses": ["You can apply online through our admission portal at www.university.edu/apply. The deadline varies by program."],
+      "source": "www.university.edu/apply"
     },
     {
       "tag": "fees",
       "patterns": ["What is the fee structure?","Fees", "Tuition fees?", "How much does the course cost?", "Are there any scholarships?", "Is there financial aid available?"],
-      "responses": ["The fee structure varies by course. Please visit www.university.edu/fees for details. We also offer scholarships and financial aid options."]
+      "responses": ["The fee structure varies by course. Please visit www.university.edu/fees for details. We also offer scholarships and financial aid options."],
+      "source": "www.university.edu/fees"
     },
     {
       "tag": "exam",
       "patterns": ["When are the exams?","Exam", "Exam schedule?", "Final exam date?", "Exam dates?", "Midterm exam?", "Upcoming exams?", "Exams"],
-      "responses": ["The exam schedule is available on the student portal under 'Exam Timetable'."]
+      "responses": ["The exam schedule is available on the student portal under 'Exam Timetable'."],
+      "source": "www.university.edu/exams"
     },
     {
       "tag": "class",
       "patterns": ["When is the class?","Class", "Class schedule?", "Class time?", "What time is my class?", "Timetable for classes?"],
-      "responses": ["The class schedule is available on the student portal under 'Class Timetable'."]
+      "responses": ["The class schedule is available on the student portal under 'Class Timetable'."],
+      "source": "www.university.edu/classes"
     },
     {
       "tag": "hostel",
       "patterns": ["Do you have hostel facilities?","Hostel", "How to apply for hostel?", "Hostel fees?", "Is there accommodation available?", "Student housing?"],
-      "responses": ["Yes, we offer hostel facilities. You can check availability and apply at www.university.edu/hostel."]
+      "responses": ["Yes, we offer hostel facilities. You can check availability and apply at www.university.edu/hostel."],
+      "source": "www.university.edu/hostel"
     },
     {
       "tag": "library",
       "patterns": ["Where is the library?","Library", "Library hours?", "How to borrow books?", "Library services?", "Is there an online library?"],
-      "responses": ["The library is open from 8 AM to 8 PM on weekdays. You can borrow books using your student ID. Visit www.university.edu/library for online resources."]
+      "responses": ["The library is open from 8 AM to 8 PM on weekdays. You can borrow books using your student ID. Visit www.university.edu/library for online resources."],
+      "source": "www.university.edu/library"
     },
     {
       "tag": "transport",
       "patterns": ["Do you provide transportation?","Transport", "Bus schedule?", "How to get a bus pass?", "Campus shuttle?", "University transport service?"],
-      "responses": ["Yes, we provide transportation services. Bus schedules and pass details are available at www.university.edu/transport."]
+      "responses": ["Yes, we provide transportation services. Bus schedules and pass details are available at www.university.edu/transport."],
+      "source": "www.university.edu/transport"
     },
     {
       "tag": "events",
       "patterns": ["Upcoming events?","Events", "University events?", "Campus activities?", "Are there any fests?", "How to participate in events?"],
-      "responses": ["You can check the latest events and activities on our events page: www.university.edu/events."]
+      "responses": ["You can check the latest events and activities on our events page: www.university.edu/events."],
+      "source": "www.university.edu/events"
     },
     {
       "tag": "faculty",
       "patterns": ["Who are the professors?","Faculty", "Faculty list?", "How can I contact my professor?", "Department faculty?", "Staff details?"],
-      "responses": ["You can find faculty details and contact information at www.university.edu/faculty."]
+      "responses": ["You can find faculty details and contact information at www.university.edu/faculty."],
+      "source": "www.university.edu/faculty"
     },
     {
       "tag": "contact",
       "patterns": ["How to contact the university?","University", "University phone number?", "Email for inquiries?", "Support contact?", "Where is the university located?", "contact"],
-      "responses": ["You can reach us at contact@university.edu or call us at +123-456-7890. Our address is available at www.university.edu/contact."]
+      "responses": ["You can reach us at contact@university.edu or call us at +123-456-7890. Our address is available at www.university.edu/contact."],
+      "source": "www.university.edu/contact"
     },
     {
       "tag": "courses",
       "patterns": ["What courses do you offer?","Courses", "Available programs?", "Undergraduate courses?", "Postgraduate programs?", "Which departments do you have?"],
-      "responses": ["We offer a wide range of undergraduate and postgraduate programs. Visit www.university.edu/courses for the full list."]
+      "responses": ["We offer a wide range of undergraduate and postgraduate programs. Visit www.university.edu/courses for the full list."],
+      "source": "www.university.edu/courses"
     },
     {
       "tag": "results",
       "patterns": ["Where can I check my results?","Results", "Exam results?", "Semester results?", "Final grades?", "How to access my grades?"],
-      "responses": ["You can check your results on the student portal under 'Exam Results' or visit www.university.edu/results."]
+      "responses": ["You can check your results on the student portal under 'Exam Results' or visit www.university.edu/results."],
+      "source": "www.university.edu/results"
     },
     {
       "tag": "internship",
       "patterns": ["Are there internship opportunities?","Internship", "How to apply for internships?", "Internship programs?", "Does the university offer internships?", "Internship placements?"],
-      "responses": ["Yes, we have internship programs in collaboration with industry partners. Check opportunities at www.university.edu/internships."]
+      "responses": ["Yes, we have internship programs in collaboration with industry partners. Check opportunities at www.university.edu/internships."],
+      "source": "www.university.edu/internships"
     },
     {
       "tag": "placement",
       "patterns": ["Does the university have placement support?","Placement", "How to get campus placement?", "Placement cell contact?", "Career services?", "Job opportunities?"],
-      "responses": ["Our university provides placement support through our career services department. Visit www.university.edu/placements for details."]
+      "responses": ["Our university provides placement support through our career services department. Visit www.university.edu/placements for details."],
+      "source": "www.university.edu/placements"
     },
     {
       "tag": "sports",
       "patterns": ["Are there sports facilities?","Sports", "How to join a sports team?", "University sports teams?", "Sports events?", "Gym facilities?"],
-      "responses": ["Yes, we have various sports facilities and teams. Visit www.university.edu/sports to learn more."]
+      "responses": ["Yes, we have various sports facilities and teams. Visit www.university.edu/sports to learn more."],
+      "source": "www.university.edu/sports"
     },
     {
       "tag": "hello",
@@ -83,27 +98,32 @@
     {
       "tag": "scholarships",
       "patterns": ["What scholarships are available?","Scholarships", "How to apply for scholarships?", "Scholarship eligibility?", "Are there any merit-based scholarships?", "Financial aid options?"],
-      "responses": ["We offer various scholarships based on merit and need. Visit www.university.edu/scholarships for more information."]
+      "responses": ["We offer various scholarships based on merit and need. Visit www.university.edu/scholarships for more information."],
+      "source": "www.university.edu/scholarships"
     },
     {
       "tag": "visa",
       "patterns": ["How to apply for a student visa?", "Visa?", "Do I need a visa to study?", "Visa application process?", "International student visa?"],
-      "responses": ["International students must apply for a student visa. Please check the visa requirements on our website or contact the international office."]
+      "responses": ["International students must apply for a student visa. Please check the visa requirements on our website or contact the international office."],
+      "source": "www.university.edu/visa"
     },
     {
       "tag": "health",
       "patterns": ["What health services are available?","Health", "How to access health services?", "Is there a clinic on campus?", "Health insurance for students?", "Mental health services?"],
-      "responses": ["We provide health services through our campus clinic. Visit www.university.edu/health for more details."]
+      "responses": ["We provide health services through our campus clinic. Visit www.university.edu/health for more details."],
+      "source": "www.university.edu/health"
     },
     {
       "tag": "counseling",
       "patterns": ["Do you offer counseling services?","Counseling", "How to get counseling?", "Mental health support?", "Counseling for students?", "Where to find a counselor?"],
-      "responses": ["Yes, we offer counseling services for students. You can schedule an appointment at www.university.edu/counseling."]
+      "responses": ["Yes, we offer counseling services for students. You can schedule an appointment at www.university.edu/counseling."],
+      "source": "www.university.edu/counseling"
     },
     {
       "tag": "feedback",
       "patterns": ["How to provide feedback?","Feedback", "Where can I give suggestions?", "Feedback form?", "Student feedback?", "How to report an issue?"],
-      "responses": ["We value your feedback! Please visit www.university.edu/feedback to share your thoughts."]
+      "responses": ["We value your feedback! Please visit www.university.edu/feedback to share your thoughts."],
+      "source": "www.university.edu/feedback"
     }
   ]
 }
