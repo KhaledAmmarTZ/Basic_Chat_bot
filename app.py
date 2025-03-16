@@ -15,7 +15,10 @@ def get_response(user_input):
     for intent in intents['intents']:
         for pattern in intent['patterns']:
             if re.search(pattern.lower(), user_input):  # Use regex search for pattern matching
-                return random.choice(intent['responses'])
+                response = random.choice(intent['responses'])
+                if 'source' in intent:
+                    response += f" For more information, visit: <a href='{intent['source']}' target='_blank'>{intent['source']}</a>"
+                return response
     return "Sorry, I didn't understand that."
 
 # Load index.html but start with profile.html content
