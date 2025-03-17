@@ -20,10 +20,10 @@
     },
     {
       "tag": "class",
-      "patterns": ["When is the class?","Class", "Class schedule?", "Class time?", "What time is my class?", "Timetable for classes?"],
-      "responses": ["The class schedule is available on the student portal under 'Class Timetable'."],
-      "source": "www.university.edu/classes"
+      "patterns": ["When is the class?", "Class", "Class schedule?", "Class time?", "What time is my class?", "Timetable for classes?"],
+      "responses": ["Click <a href='#' onclick=\"loadPage('/class_routine')\">here</a> to view the class schedule."]
     },
+    
     {
       "tag": "hostel",
       "patterns": ["Do you have hostel facilities?","Hostel", "How to apply for hostel?", "Hostel fees?", "Is there accommodation available?", "Student housing?"],

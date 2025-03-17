@@ -11,15 +11,14 @@ with open('intents.json') as file:
 
 # Function to get a response
 def get_response(user_input):
-    user_input = user_input.lower()  # Convert user input to lowercase
+    user_input = user_input.lower()  # Convert input to lowercase
     for intent in intents['intents']:
         for pattern in intent['patterns']:
-            if re.search(pattern.lower(), user_input):  # Use regex search for pattern matching
+            if re.search(pattern.lower(), user_input):  # Use regex search
                 response = random.choice(intent['responses'])
-                if 'source' in intent:
-                    response += f" For more information, visit: <a href='{intent['source']}' target='_blank'>{intent['source']}</a>"
-                return response
+                return response  # Returns response, which may contain a redirect
     return "Sorry, I didn't understand that."
+
 
 # Load index.html but start with profile.html content
 @app.route('/')
