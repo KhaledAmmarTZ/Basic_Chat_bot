@@ -15,8 +15,7 @@
     {
       "tag": "exam",
       "patterns": ["When are the exams?","Exam", "Exam schedule?", "Final exam date?", "Exam dates?", "Midterm exam?", "Upcoming exams?", "Exams"],
-      "responses": ["The exam schedule is available on the student portal under 'Exam Timetable'."],
-      "source": "www.university.edu/exams"
+      "responses": ["Click <a href='#' onclick=\"loadPage('/class_test')\">here</a> to view the class test."]
     },
     {
       "tag": "class",
