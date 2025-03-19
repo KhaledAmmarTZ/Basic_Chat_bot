@@ -5,29 +5,26 @@ import re
 
 app = Flask(__name__)
 
-# Load intents
 with open('intents.json') as file:
     intents = json.load(file)
 
-# Function to get a response
 def get_response(user_input):
-    user_input = user_input.lower()  # Convert input to lowercase
+    user_input = user_input.lower()  
     for intent in intents['intents']:
         for pattern in intent['patterns']:
-            if re.search(pattern.lower(), user_input):  # Use regex search
+            if re.search(pattern.lower(), user_input): 
                 response = random.choice(intent['responses'])
-                return response  # Returns response, which may contain a redirect
+                return response  
     return "Sorry, I didn't understand that."
 
 
-# Load index.html but start with profile.html content
 @app.route('/')
 def index():
     return render_template('index.html', page='profile.html')
 
 @app.route('/profile')
 def profile():
-    return render_template('profile.html', layout=False)  # Prevents full reloading
+    return render_template('profile.html', layout=False) 
 
 @app.route('/class_routine')
 def class_routine():
