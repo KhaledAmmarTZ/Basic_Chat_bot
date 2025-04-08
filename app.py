@@ -11,14 +11,21 @@ with open('intents.json') as file:
 
 # Function to get a response
 def get_response(user_input):
-    user_input = user_input.lower()  # Convert input to lowercase
+    user_input = user_input.lower().strip()
+
+    # Exact match
     for intent in intents['intents']:
         for pattern in intent['patterns']:
-            if re.search(pattern.lower(), user_input):  # Use regex search
-                response = random.choice(intent['responses'])
-                return response  # Returns response, which may contain a redirect
-    return "Sorry, I didn't understand that."
+            if user_input == pattern.lower().strip():
+                return random.choice(intent['responses'])
 
+    # Regex or partial match
+    for intent in intents['intents']:
+        for pattern in intent['patterns']:
+            if re.search(re.escape(pattern.lower()), user_input):
+                return random.choice(intent['responses'])
+
+    return "Sorry, I didn't understand that."
 
 # Load index.html but start with profile.html content
 @app.route('/')
@@ -27,7 +34,7 @@ def index():
 
 @app.route('/profile')
 def profile():
-    return render_template('profile.html', layout=False)  # Prevents full reloading
+    return render_template('profile.html', layout=False)  
 
 @app.route('/class_routine')
 def class_routine():
@@ -37,11 +44,18 @@ def class_routine():
 def class_test():
     return render_template('class_test.html', layout=False)
 
+@app.route('/midterm_exam')
+def midterm_exam():
+    return render_template('midterm_exam.html', layout=False)
+
+@app.route('/final_exam')
+def final_exam():
+    return render_template('final_exam.html', layout=False)
 
 
 @app.route('/get', methods=['POST'])
 def get_bot_response():
-    user_input = request.form['msg']
+    user_input = request.form.get('msg', '')
     return get_response(user_input)
 
 if __name__ == '__main__':
