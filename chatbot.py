@@ -1,11 +1,9 @@
 import json
 import random
 
-# Load intents
 with open('intents.json') as file:
     intents = json.load(file)
 
-# Function to get a response
 def get_response(user_input):
     for intent in intents['intents']:
         for pattern in intent['patterns']:
@@ -16,7 +14,6 @@ def get_response(user_input):
                 return response
     return "Sorry, I didn't understand that."
 
-# Chat loop
 print("Welcome to the Student Support Chatbot! (Type 'quit' to exit)")
 while True:
     user_input = input("You: ")
