@@ -9,7 +9,6 @@ with open('intents.json') as file:
     intents = json.load(file)
 
 def get_response(user_input):
-<<<<<<< HEAD:app.py
     user_input = user_input.lower().strip()
 
     # Exact match
@@ -17,15 +16,6 @@ def get_response(user_input):
         for pattern in intent['patterns']:
             if user_input == pattern.lower().strip():
                 return random.choice(intent['responses'])
-=======
-    user_input = user_input.lower()  
-    for intent in intents['intents']:
-        for pattern in intent['patterns']:
-            if re.search(pattern.lower(), user_input): 
-                response = random.choice(intent['responses'])
-                return response  
-    return "Sorry, I didn't understand that."
->>>>>>> main:main.py
 
     # Regex or partial match
     for intent in intents['intents']:
@@ -41,11 +31,7 @@ def index():
 
 @app.route('/profile')
 def profile():
-<<<<<<< HEAD:app.py
     return render_template('profile.html', layout=False)  
-=======
-    return render_template('profile.html', layout=False) 
->>>>>>> main:main.py
 
 @app.route('/class_routine')
 def class_routine():
