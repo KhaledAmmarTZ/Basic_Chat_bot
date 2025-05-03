@@ -13,15 +13,45 @@
       "source": "www.university.edu/fees"
     },
     {
-      "tag": "exam",
-      "patterns": ["When are the exams?","Exam", "Exam schedule?", "Final exam date?", "Exam dates?", "Midterm exam?", "Upcoming exams?", "Exams"],
-      "responses": ["Click <a href='#' onclick=\"loadPage('/class_test')\">here</a> to view the class test."]
+      "tag": "class_general",
+      "patterns": ["Class"],
+      "responses": ["Do you mean to view?<br><ul><li><a href='#' onclick=\"loadPage('/class_routine')\">Class Routine</a></li><li><a href='#' onclick=\"loadPage('/class_test')\">Class Test</a></li>"]
     },
     {
-      "tag": "class",
-      "patterns": ["When is the class?", "Class", "Class schedule?", "Class time?", "What time is my class?", "Timetable for classes?"],
+      "tag": "final_exam",
+      "patterns": ["Final exam", "Finals", "When is the final exam?", "Final test", "Finals schedule", "Final"],
+      "responses": [
+        "<a href='#' onclick=\"loadPage('/final_exam')\">Click here to view the Final Exam schedule</a>."
+      ]
+    },
+    {
+      "tag": "midterm_exam",
+      "patterns": ["Midterm exam", "Midterms", "When is the midterm exam?", "Midterm schedule", "Midterm test" ,"Midterm"],
+      "responses": [
+        "<a href='#' onclick=\"loadPage('/midterm_exam')\">Click here to view the Midterm Exam schedule</a>."
+      ]
+    },
+    {
+      "tag": "class_test",
+      "patterns": ["Class test", "When is the class test?", "Class test schedule?", "Test timetable", "Unit test"],
+      "responses": [
+        "<a href='#' onclick=\"loadPage('/class_test')\">Click here to view the Class Test schedule</a>."
+      ]
+    },
+    {
+      "tag": "exam_general",
+      "patterns": ["When are the exams?", "Exam", "Exam schedule?", "Exam dates?", "Upcoming exams?", "Exams"],
+      "responses": [
+        "What type of exam do you want to view?<br><ul><li><a href='#' onclick=\"loadPage('/class_test')\">Class Test</a></li><li><a href='#' onclick=\"loadPage('/midterm_exam')\">Midterm Exam</a></li><li><a href='#' onclick=\"loadPage('/final_exam')\">Final Exam</a></li></ul>"
+      ]
+    },
+
+    {
+      "tag": "class_routine",
+      "patterns": ["Class routine", "Class schedule", "When is the class?", "Class timetable?", "Class timings?", "What time is my class?", "Class timetable"],
       "responses": ["Click <a href='#' onclick=\"loadPage('/class_routine')\">here</a> to view the class schedule."]
     },
+
     
     {
       "tag": "hostel",
